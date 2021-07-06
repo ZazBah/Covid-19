@@ -61,7 +61,7 @@
     font-family: 'Bree Serif', serif;
 }
 .search-btn{
-    width: 25%;
+    width: 29%;
     background-color: white;
     margin-left: 0px !important;
     color: #252526;
@@ -84,6 +84,18 @@
 }
 .search-btn:hover{
     background-color: #27AE60;
+}
+.form-control{
+    width: 100%;
+    border: 2px solid #252526;
+    color: #252526;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.form-control:focus{
+    outline: none;
 }
 /*BODY-E*/
 /*FOOTER-S*/

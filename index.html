@@ -70,6 +70,11 @@
         <div class="container-fluid margin-top">
             <div class="row">
                 <div class="col-10 offset-1 col-lg-4 offset-lg-4">
+                    <select id="country" name="country" class="form-control" onchange="handleSelect()">
+                        <option>Select Country</option>
+                    </select>
+                </div>
+                <div class="col-10 offset-1 col-lg-4 offset-lg-4">
                     <div class="search-bar-div">
                         <input id="inputCountry" class="search-input" type="text" placeholder="Search by country">
                         <div class="btn search-btn" onclick="handleSearch()">Search</div>

@@ -3,6 +3,12 @@ window.onload = function (){
     dataFind(Country)
 }
 
+function handleSelect(){
+    let Country = $('#country').val();
+
+    dataFind(Country)
+}
+
 function handleSearch(){
     let Country = $('#inputCountry').val()
 
@@ -50,7 +56,8 @@ function dataFind(Country){
     
     var c;
 
-    for(i=0; i<= 222; i++){
+    for(i=1; i<= 222; i++){
+        $('#country').append("<option>"+ data[i].country + "</option>")
         if(data[i].country == countryName){
             var c = i;
         }
@@ -99,8 +106,6 @@ function dataFind(Country){
             $(`#${inputID}`).css("color","red")
         }
     }
-
-    console.log(c)
 
 })
 }
