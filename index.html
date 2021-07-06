@@ -7,7 +7,7 @@
     <title>Covid-19</title>
     
 
-     <!--fav_icon-->
+     <!--fav_iconcountry
      <link rel="shortcut icon" type="image/png" href="asset/image/favicon.png">
 
     <!--Bootstrap_CSS-->
@@ -16,6 +16,12 @@
     <!--Google_fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Uchen&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kanit:wght@500&family=Uchen&display=swap" rel="stylesheet">
 
     <!--My_CSS-->
     <link rel="stylesheet" href="asset/css/style.css">
@@ -63,26 +69,32 @@
 
         <div class="container-fluid margin-top">
             <div class="row">
+                <div class="col-10 offset-1 col-lg-4 offset-lg-4">
+                    <div class="search-bar-div">
+                        <input id="inputCountry" class="search-input" type="text" placeholder="Search by country">
+                        <div class="btn search-btn" onclick="handleSearch()">Search</div>
+                    </div>
+                </div>
                 <div class="col-10 offset-1 col-lg-4 offset-lg-4 div-style-1">
-                    <h1 class="heading-2">Bangladesh</h1>
+                    <h1 id="outputCountryName" class="heading-2"></h1>
                 </div>
                 <div class="col-10 offset-1 col-lg-4 offset-lg-2 div-style-1">
-                    <p class="pera-1 top-text-margin">Total Cases : <span id="bdTotalCases"></span></p>
-                    <p class="pera-1 bottom-text-margin">Todays Cases : <span id="bdTodayCases"></span></p>
+                    <p class="pera-1 top-text-margin">Total Cases : <span id="countryTotalCases"></span></p>
+                    <p class="pera-1 bottom-text-margin">Todays Cases : <span id="countryTodayCases"></span></p>
                 </div>
                 <div class="col-10 offset-1 col-lg-4 offset-lg-0 div-style-1 margin-left">
-                    <p class="pera-1 top-text-margin">Total Deaths : <span id="bdTotalDeaths"></span></p>
-                    <p class="pera-1 bottom-text-margin">Todays Deaths : <span id="bdTodayDeaths"></span></p>
+                    <p class="pera-1 top-text-margin">Total Deaths : <span id="countryTotalDeaths"></span></p>
+                    <p class="pera-1 bottom-text-margin">Todays Deaths : <span id="countryTodayDeaths"></span></p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-10 offset-1 col-lg-4 offset-lg-2 div-style-1">
-                    <p class="pera-1 top-text-margin">Active Cases : <span id="bdActiveCases"></span></p>
-                    <p class="pera-1 bottom-text-margin">Recoverd Cases : <span id="bdRecoverdCases"></span></p>
+                    <p class="pera-1 top-text-margin">Active Cases : <span id="countryActiveCases"></span></p>
+                    <p class="pera-1 bottom-text-margin">Recoverd Cases : <span id="countryRecoverdCases"></span></p>
                 </div>
                 <div class="col-10 offset-1 col-lg-4 offset-lg-0 div-style-1 margin-left">
-                    <p class="pera-1 top-text-margin">Cases per(1M) : <span id="bdCasesPer"></span></p>
-                    <p class="pera-1 bottom-text-margin">Deaths per(1M) : <span id="bdDeathsPer"></span></p>
+                    <p class="pera-1 top-text-margin">Cases per(1M) : <span id="countryCasesPer"></span></p>
+                    <p class="pera-1 bottom-text-margin">Deaths per(1M) : <span id="countryDeathsPer"></span></p>
                 </div>
             </div>
         </div>

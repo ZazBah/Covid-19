@@ -1,4 +1,19 @@
-$.get('https://coronavirus-19-api.herokuapp.com/countries', function(data){
+window.onload = function (){
+    let Country = "Bangladesh";
+    dataFind(Country)
+}
+
+function handleSearch(){
+    let Country = $('#inputCountry').val()
+
+    dataFind(Country)
+}
+
+function dataFind(Country){
+    var countryName = Country;
+    
+    $.get('https://coronavirus-19-api.herokuapp.com/countries', function(data){
+
     let worldTotalCases = data[0].cases ;
     let worldTodayCases = data[0].todayCases ;
     let worldTotalDeaths = data[0].deaths ;
@@ -8,37 +23,84 @@ $.get('https://coronavirus-19-api.herokuapp.com/countries', function(data){
     let worldCasesPer = data[0].casesPerOneMillion;
     let worldDeathsPer = data[0].deathsPerOneMillion;
 
+    handlecolor("worldTotalCases", worldTotalCases)
     $('#worldTotalCases').text(worldTotalCases)
+
+    handlecolor("worldTodayCases", worldTodayCases)
     $('#worldTodayCases').text(worldTodayCases)
 
+    handlecolor("worldTotalDeaths", worldTotalDeaths)
     $('#worldTotalDeaths').text(worldTotalDeaths)
+
+    handlecolor("worldTodayDeaths", worldTodayDeaths)
     $('#worldTodayDeaths').text(worldTodayDeaths)
 
+    handlecolor("worldActiveCases", worldActiveCases)
     $('#worldActiveCases').text(worldActiveCases)
+
+    handlecolor("worldRecoverdCases", worldRecoverdCases)
     $('#worldRecoverdCases').text(worldRecoverdCases)
 
+    handlecolor("worldCasesPer", worldCasesPer)
     $('#worldCasesPer').text(worldCasesPer)
+
+    handlecolor("worldDeathsPer", worldDeathsPer)
     $('#worldDeathsPer').text(worldDeathsPer)
 
+    
+    var c;
 
+    for(i=0; i<= 222; i++){
+        if(data[i].country == countryName){
+            var c = i;
+        }
+    }
 
-    let bdTotalCases = data[30].cases ;
-    let bdTodayCases = data[30].todayCases ;
-    let bdTotalDeaths = data[30].deaths ;
-    let bdTodayDeaths = data[30].todayDeaths ;
-    let bdActiveCases = data[30].active ;
-    let bdRecoverdCases = data[30].recovered;
-    let bdCasesPer = data[30].casesPerOneMillion;
-    let bdDeathsPer = data[30].deathsPerOneMillion;
+    let outputCountryName = data[c].country;
+    let countryTotalCases = data[c].cases ;
+    let countryTodayCases = data[c].todayCases ;
+    let countryTotalDeaths = data[c].deaths ;
+    let countryTodayDeaths = data[c].todayDeaths ;
+    let countryActiveCases = data[c].active ;
+    let countryRecoverdCases = data[c].recovered;
+    let countryCasesPer = data[c].casesPerOneMillion;
+    let countryDeathsPer = data[c].deathsPerOneMillion;
 
-    $('#bdTotalCases').text(bdTotalCases)
-    $('#bdTodayCases').text(bdTodayCases)
-    $('#bdTotalDeaths').text(bdTotalDeaths)
-    $('#bdTodayDeaths').text(bdTodayDeaths)
-    $('#bdActiveCases').text(bdActiveCases)
-    $('#bdRecoverdCases').text(bdRecoverdCases)
-    $('#bdCasesPer').text(bdCasesPer)
-    $('#bdDeathsPer').text(bdDeathsPer)
+    $('#outputCountryName').text(outputCountryName)
 
+    handlecolor("countryTotalCases", countryTotalCases)
+    $('#countryTotalCases').text(countryTotalCases)
+
+    handlecolor("countryTodayCases", countryTodayCases)
+    $('#countryTodayCases').text(countryTodayCases)
+
+    handlecolor("countryTotalDeaths", countryTotalDeaths)
+    $('#countryTotalDeaths').text(countryTotalDeaths)
+
+    handlecolor("countryTodayDeaths", countryTodayDeaths)
+    $('#countryTodayDeaths').text(countryTodayDeaths)
+
+    handlecolor("countryActiveCases", countryActiveCases)
+    $('#countryActiveCases').text(countryActiveCases)
+
+    handlecolor("countryRecoverdCases", countryRecoverdCases)
+    $('#countryRecoverdCases').text(countryRecoverdCases)
+
+    handlecolor("countryCasesPer", countryCasesPer)
+    $('#countryCasesPer').text(countryCasesPer)
+
+    handlecolor("countryDeathsPer", countryDeathsPer)
+    $('#countryDeathsPer').text(countryDeathsPer)
+
+    function handlecolor(inputID, inputData){
+        if(inputData == 0){
+            $(`#${inputID}`).css("color","green")
+        } else {
+            $(`#${inputID}`).css("color","red")
+        }
+    }
+
+    console.log(c)
 
 })
+}

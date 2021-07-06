@@ -7,6 +7,7 @@
     text-align: center;
     color: #1e1e1e;
     font-size: 20px;
+    font-family: 'Uchen', serif;
 }
 
 /*HEAD-E*/
@@ -20,8 +21,10 @@
     text-align: center;
     color: #ffffff;
     font-size: 25px;
+    font-family: 'Kanit', sans-serif;
 }
 .pera-1{
+    font-family: 'Bree Serif', serif;
     color: #ffffff;
     font-size: 15px;
     text-align: center;
@@ -36,6 +39,51 @@
 }
 .margin-top{
     margin-top: 50px;
+}
+.search-bar-div{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.search-input{
+    width: 70%;
+    margin-right: 0px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 2px solid #252526;
+    color: #252526;
+    outline: 0px;
+    padding-left: 20px;
+    font-family: 'Bree Serif', serif;
+}
+.search-btn{
+    width: 25%;
+    background-color: white;
+    margin-left: 0px !important;
+    color: #252526;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    border: 2px solid #252526;
+    outline: 0px;
+    margin-top: -4px !important;
+    margin-left: -4px !important;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: 0.3s;
+    font-family: 'Bree Serif', serif;
+}
+.search-btn:hover{
+    background-color: #27AE60;
 }
 /*BODY-E*/
 /*FOOTER-S*/
