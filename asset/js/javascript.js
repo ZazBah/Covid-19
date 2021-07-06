@@ -55,12 +55,22 @@ function dataFind(Country){
 
     
     var c;
+    var allCountry = [];
 
     for(i=1; i<= 222; i++){
-        $('#country').append("<option>"+ data[i].country + "</option>")
+       /* $('#A').append("<option>"+ data[i].country + "</option>") */
+
+       allCountry.push(data[i].country)
+
         if(data[i].country == countryName){
             var c = i;
         }
+    }
+
+    let allCountrySorted = allCountry.sort()
+
+    for(i=0; i<= 221; i++){
+        $('#country').append("<option>"+ allCountrySorted[i] + "</option>")
     }
 
     let outputCountryName = data[c].country;
