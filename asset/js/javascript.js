@@ -9,12 +9,6 @@ function handleSelect(){
     dataFind(Country)
 }
 
-function handleSearch(){
-    let Country = $('#inputCountry').val()
-
-    dataFind(Country)
-}
-
 function dataFind(Country){
     var countryName = Country;
     
